@@ -1,0 +1,127 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color:#1c1c23 ;
+    color: #fbe3a9;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav {
+    background-color:#1c1c23 ;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fbe3a9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    transform: scale(1.2);
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    padding: 8px 16px;
+    transition: all 0.3s ease; /* Efecto suave en color y fondo */
+}
+
+.contenido-principal {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color:#fbe3a9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contenido-principal ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.contenido-principal li {
+    margin-bottom: 8px;
+}
+
+footer {
+    background-color:#1c1c23 ;
+    color:#fbe3a9;
+    text-align: center;
+    padding: 10px 0;
+
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    border-radius: 10px;
+    max-width: 250px;
+    height: auto;
+    display: inline-block;
+}
+
+.redes-sociales {
+    text-align: center;
+    padding: 15px 0;
+    background-color:#1c1c23 ; /* Fondo oscuro para contrastar */
+}
+
+.redes-sociales a {
+    color:#fbe3a9;
+    font-size: 24px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: #8f0b13; 
+    transform: scale(1.2);
+}
+/* Contenedor de imágenes */
+.imagenes-destacadas {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin-bottom: 20px; 
+}
+
+/* Estilo para cada imagen */
+.imagen-producto {
+    width: 200px; 
+    height: auto; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+
+
+.imagen-producto:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

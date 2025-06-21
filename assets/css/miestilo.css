@@ -1,0 +1,348 @@
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 40px 20px;
+}
+
+.login-container  {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1c1c23;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.login-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.login-form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.login-form .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.login-form .form-control:focus {
+    border-color: #1c1c23;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(28, 28, 35, 0.25);
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.btn-login {
+    background-color: #1c1c23;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-login:hover {
+    background-color: #2a2a35;
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: #555;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-cancel:hover {
+    background-color: #f5f5f5;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.register-link a {
+    color: #1c1c23;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+    
+    .login-title {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+}
+.accordion-php {
+    width: 100%;
+}
+
+.accordion-item-php {
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-header-php {
+    margin: 0;
+}
+
+.accordion-button-php {
+    display: block;
+    padding: 1rem 1.25rem;
+    color: #212529;
+    text-decoration: none;
+    background-color: #f8f9fa;
+    border: none;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-button-php:hover {
+    background-color: #e9ecef;
+}
+
+.accordion-button-php:not(.collapsed) {
+    background-color: #e9ecef;
+}
+
+.accordion-button-php i {
+    margin-right: 0.5rem;
+}
+
+.accordion-collapse-php {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-collapse-php:target {
+    max-height: 1000px; /* Ajusta este valor según tu contenido */
+}
+
+.accordion-body-php {
+    padding: 1rem 1.25rem;
+    background-color: #fff;
+}
+
+/* Estilo cuando un acordeón está abierto */
+.accordion-collapse-php:target + .accordion-item-php .accordion-button-php {
+    background-color: #e9ecef;
+}
+/* Estilos para el formulario de registro compacto */
+.card {
+    margin: 20px 0;
+}
+
+.form-outline {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-outline input {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.form-outline label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.75rem;
+    font-size: 0.9rem;
+    color: #495057;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.form-outline input:focus ~ label,
+.form-outline input:not(:placeholder-shown) ~ label {
+    top: -0.8rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+    background: white;
+    padding: 0 0.25rem;
+    color: #1c1c23;
+}
+
+.btn-primary {
+    background-color: #1c1c23;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #2a2a35;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 10px 0;
+    }
+    
+    .form-outline input {
+        padding: 0.4rem 0.6rem;
+    }
+}
+/* Estilos para el carrusel CSS puro */
+.css-carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.css-carousel .carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.css-carousel .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.css-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.css-carousel .carousel-open:checked + .carousel-item {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-prev,
+.carousel-next {
+    display: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.css-carousel:hover .carousel-prev,
+.css-carousel:hover .carousel-next {
+    display: block;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.carousel-open:checked ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4:checked ~ .carousel-indicators li:nth-child(4) .carousel-bullet {
+    background-color: white;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    text-align: center;
+}
+
+#carousel-1:checked ~ .carousel-controls label:nth-child(2),
+#carousel-2:checked ~ .carousel-controls label:nth-child(4),
+#carousel-3:checked ~ .carousel-controls label:nth-child(6),
+#carousel-4:checked ~ .carousel-controls label:nth-child(8) {
+    display: block;
+}
+
+#carousel-1:checked ~ .carousel-controls label:nth-child(7),
+#carousel-2:checked ~ .carousel-controls label:nth-child(1),
+#carousel-3:checked ~ .carousel-controls label:nth-child(3),
+#carousel-4:checked ~ .carousel-controls label:nth-child(5) {
+    display: block;
+}
