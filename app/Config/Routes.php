@@ -13,3 +13,6 @@ $routes->get('login', 'Home::login');
 $routes->get('registro', 'Home::registro');
 $routes->get('/usuario/registrar', 'UsuarioController::registrar');
 $routes->post('/usuario/guardar', 'UsuarioController::guardar');
+$routes->get('/login', 'Login_controller::index');
+$routes->post('/login/autenticar', 'Login_controller::autenticar');
+$routes->get('/logout', 'Login_controller::salir');

@@ -12,6 +12,15 @@
                             </div>
                         <?php endif; ?>
 
+                        <?php if (session()->getFlashdata('error')): ?>
+                            <div class="alert alert-danger">
+                                <?= session()->getFlashdata('error') ?>
+
+                            <div class="alert alert-success">
+                                <?= session()->getFlashdata('mensaje') ?>
+                            </div>
+                        <?php endif; ?>
+
                         <form action="<?= base_url('/usuario/guardar') ?>" method="post">
                             <div class="row">
                                 <div class="col-md-6 mb-3">

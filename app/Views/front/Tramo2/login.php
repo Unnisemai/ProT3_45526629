@@ -1,34 +1,46 @@
-<div class="container mt-5 mb-5">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('ruta/a/miestilo.css') ?>"> <!-- Opcional -->
+</head>
+<body>
+
+<div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-5">
-            <div class="card shadow">
-                <div class="card-body p-4">
-                    <h2 class="card-title text-center mb-4">Iniciar sesión</h2>
-                    <form class="needs-validation" novalidate>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="email" required>
-                            <div class="invalid-feedback">
-                                Por favor ingrese un correo válido
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password" required>
-                            <div class="invalid-feedback">
-                                Por favor ingrese su contraseña
-                            </div>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="submit">Ingresar</button>
-                            <button class="btn btn-outline-secondary" type="button">Cancelar</button>
-                        </div>
-                        <div class="text-center mt-3">
-                            <p>¿Aún no se registró? <a href="registro.php">Registrarse aquí</a></p>
-                        </div>
-                    </form>
-                </div>
+        <div class="col-md-6">
+
+            <div class="card shadow-sm p-4">
+                <h3 class="text-center mb-4">Iniciar Sesión</h3>
+
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger">
+                        <?= session()->getFlashdata('error') ?>
+                    </div>
+                <?php endif; ?>
+
+                <form action="<?= base_url('/login/autenticar') ?>" method="post">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico:</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" name="password" id="password" required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-dark">Ingresar</button>
+                    </div>
+                </form>
             </div>
+
         </div>
     </div>
 </div>
+
+</body>
+</html>
