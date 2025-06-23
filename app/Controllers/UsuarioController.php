@@ -20,7 +20,7 @@ class UsuarioController extends Controller
         $data = [
             'nombre'     => $this->request->getVar('nombre'),
             'email'      => $this->request->getVar('email'),
-            'contraseña' => password_hash($this->request->getVar('contraseña'), PASSWORD_DEFAULT)
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
         ];
 
         $usuarioModel->save($data);
