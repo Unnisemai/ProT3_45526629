@@ -156,7 +156,7 @@
 }
 
 .accordion-collapse-php:target {
-    max-height: 1000px; /* Ajusta este valor según tu contenido */
+    max-height: 1000px; /* ajusta este valor según tu contenido */
 }
 
 .accordion-body-php {
@@ -164,11 +164,11 @@
     background-color: #fff;
 }
 
-/* Estilo cuando un acordeón está abierto */
+/* estilo cuando un acordeón está abierto */
 .accordion-collapse-php:target + .accordion-item-php .accordion-button-php {
     background-color: #e9ecef;
 }
-/* Estilos para el formulario de registro compacto */
+/* estilos para el formulario de registro compacto */
 .card {
     margin: 20px 0;
 }
@@ -222,7 +222,7 @@
         padding: 0.4rem 0.6rem;
     }
 }
-/* Estilos para el carrusel CSS puro */
+/* estilos para el carrusel */
 .css-carousel {
     position: relative;
     overflow: hidden;
@@ -354,6 +354,7 @@
     border-radius: 10px;
     margin-top: 40px;
     color: #c9d1d9;
+    margin-bottom: 80px;
 }
 
 .admin-card h2 {

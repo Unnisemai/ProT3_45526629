@@ -8,8 +8,8 @@ class Login_controller extends BaseController
 {
     public function index()
     {
-        // Muestra el formulario si el usuario no está logueado
-        return view('login');  // Asegurate de tener app/Views/login.php
+        // muestra el formulario si el usuario no está logueado
+        return view('login');
     }
 
     public function autenticar()
@@ -17,24 +17,24 @@ class Login_controller extends BaseController
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
-        $usuarioModel = new UsuarioModel();
+        $usuarioModel = new \App\Models\UsuarioModel();
         $usuario = $usuarioModel->where('email', $email)->first();
 
-        if ($usuario && password_verify($password, $usuario['password'])) {
-            // Usuario válido, guardamos en sesión
+        if ($usuario && password_verify($password, $usuario['password']))
+        {
+            // usuario válido se guarda
             $datosSesion = [
                 'id' => $usuario['id'],
                 'nombre' => $usuario['nombre'],
-                'rol' => $usuario['rol'], // Muy importante
+                'rol' => $usuario['rol'], //rol
                 'logueado' => true
             ];
             session()->set($datosSesion);
 
-            return redirect()->to('/principal');  // Redirige a tu página principal
+            return redirect()->to('/principal');  // va a principal
         } else {
-            // Usuario no válido
-            session()->setFlashdata('error', 'Usuario o contraseña incorrectos.');
-            return redirect()->to('/login');
+            // usuario no válido
+           return redirect()->to('/login')->with('error', 'Usuario o contraseña incorrectos.');
         }
     }
 
@@ -42,5 +42,27 @@ class Login_controller extends BaseController
     {
         session()->destroy();
         return redirect()->to('/login');
+    }
+
+    public function verificar()
+    {
+    $email = $this->request->getPost('email');
+    $password = $this->request->getPost('password');
+
+    $usuarioModel = new \App\Models\UsuarioModel();
+    $usuario = $usuarioModel->where('email', $email)->first();
+
+    if ($usuario && password_verify($password, $usuario['password'])) {
+        $datosSesion = [
+            'id'       => $usuario['id'],
+            'nombre'   => $usuario['nombre'],
+            'rol'      => $usuario['rol'],
+            'logueado' => true
+        ];
+        session()->set($datosSesion);
+        return redirect()->to('/principal');
+    } else {
+        return redirect()->to('/login')->with('error', 'Usuario o contraseña incorrectos.');
+    }
     }
 }

@@ -21,7 +21,7 @@
                     </div>
                 <?php endif; ?>
 
-                <form action="<?= base_url('/login/autenticar') ?>" method="post">
+                <form action="<?= base_url('/verificar') ?>" method="post">
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo electrónico:</label>
                         <input type="email" class="form-control" name="email" id="email" required>
