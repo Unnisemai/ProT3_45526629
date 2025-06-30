@@ -85,4 +85,35 @@ class UsuarioController extends Controller
 
     return redirect()->to('/usuarios')->with('mensaje', 'Usuario habilitado');
     }
+
+    public function editar($id)
+    {
+    $usuarioModel = new \App\Models\UsuarioModel();
+    $usuario = $usuarioModel->find($id);
+
+    return view('front/Tramo2/editar_usuario', ['usuario' => $usuario]);
+    }
+
+    public function actualizar($id)
+    {
+    $usuarioModel = new \App\Models\UsuarioModel();
+
+    $data = [
+        'nombre' => $this->request->getPost('nombre'),
+        'email'  => $this->request->getPost('email'),
+        'rol'    => $this->request->getPost('rol'),
+        'activo' => $this->request->getPost('activo'),
+    ];
+
+    if ($this->request->getPost('password')) {
+        $data['password'] = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
+    }
+
+    $usuarioModel->update($id, $data);
+
+    return redirect()->to('/usuarios')->with('mensaje', 'Usuario actualizado exitosamente');
+    }
+
+
+
 }

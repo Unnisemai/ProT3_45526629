@@ -23,3 +23,5 @@ $routes->get('/usuarios/haceradmin/(:num)', 'UsuarioController::haceradmin/$1');
 $routes->get('/usuarios/eliminar/(:num)', 'UsuarioController::eliminar/$1');
 $routes->post('/usuarios/crear', 'UsuarioController::crear');
 $routes->post('/verificar', 'Login_controller::verificar');
+$routes->get('/usuarios/editar/(:num)', 'UsuarioController::editar/$1');
+$routes->post('/usuarios/actualizar/(:num)', 'UsuarioController::actualizar/$1');

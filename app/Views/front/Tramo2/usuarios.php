@@ -52,6 +52,7 @@
                                 <?php if ($usuario['rol'] !== 'admin'): ?>
                                     <a href="<?= base_url('/usuarios/haceradmin/' . $usuario['id']) ?>" class="btn btn-sm btn-info">Hacer Admin</a>
                                 <?php endif; ?>
+                                <a href="<?= base_url('/usuarios/editar/' . $usuario['id']) ?>" class="btn btn-sm btn-primary">Editar</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
